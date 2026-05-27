@@ -1100,6 +1100,11 @@ pre.code-block {
   color: var(--ink-dim);
   line-height: 1.35;
 }
+.demo-cta-card a {
+  color: var(--accent-magenta);
+  text-decoration: none;
+  font-weight: 500;
+}
 .demo-cta-card.mag {
   border-color: rgba(189, 0, 255, 0.4);
 }
