@@ -1,0 +1,1837 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Construye un Panel de Ayuda Contextual con IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <deck-stage width="1920" height="1080">
+      <section data-label="01 Portada">
+        <div class="mesh-bg"></div>
+        <div class="scanline"></div>
+        <div class="frame cover-frame">
+          <div class="cover-left">
+            <div class="io-badge" style="margin-bottom: 32px">
+              <span class="gdot"></span> Build with AI · Santa Cruz
+            </div>
+            <h1 class="cover-title title-in">
+              <span class="neon-cyan">Construye</span><br />
+              <span>un panel de ayuda</span><br />
+              <span>contextual</span><br />
+              <span class="neon-magenta">con IA</span>
+            </h1>
+          </div>
+
+          <div class="cover-viz">
+            <div class="wf-sphere">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+              <div class="ring r4"></div>
+              <div class="ring r5"></div>
+              <div class="core"></div>
+            </div>
+            <div class="orbit-cube">
+              <div class="wf-cube">
+                <div class="face f1"></div>
+                <div class="face f2"></div>
+                <div class="face f3"></div>
+                <div class="face f4"></div>
+                <div class="face f5"></div>
+                <div class="face f6"></div>
+              </div>
+            </div>
+            <div class="floating-tag ft1">// gemini-nano.local</div>
+            <div class="floating-tag ft2">// view-transitions</div>
+            <div class="floating-tag ft3">// anchor-positioning</div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 01 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="02 Bio">
+        <div class="mesh-bg" style="opacity: 0.35"></div>
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title"><span class="cyan">Software</span> Engineer</h1>
+
+          <div class="bio-row">
+            <div class="bio-photo-wrap">
+              <div class="bio-photo-ring outer"></div>
+              <div class="bio-photo-ring"></div>
+              <div class="bio-photo-slot">
+                <img
+                  src="assets/vanessa.png"
+                  alt="Vanessa Aristizabal"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                  "
+                />
+              </div>
+              <div
+                style="position: absolute; top: 20px; right: -20px"
+                class="mono"
+              >
+                <span class="pill magenta">GDE · Web</span>
+              </div>
+              <div
+                style="position: absolute; bottom: 40px; left: -30px"
+                class="mono"
+              >
+                <span class="pill">GitHub Star</span>
+              </div>
+            </div>
+
+            <div>
+              <div
+                class="mono"
+                style="
+                  font-size: 24px;
+                  color: var(--grid-cyan);
+                  letter-spacing: 0.16em;
+                  text-transform: uppercase;
+                "
+              >
+                // IDENTITY
+              </div>
+              <div class="bio-name">
+                Vanessa <span class="last">Aristizabal</span>
+              </div>
+
+              <ul class="bio-list">
+                <li>
+                  <span class="tick">[01]</span
+                  ><span
+                    >Ingeniera de Sistemas &amp; Magíster en Ingeniería.</span
+                  >
+                </li>
+                <li>
+                  <span class="tick">[02]</span
+                  ><span
+                    >Google Developer Expert — Web Technologies &amp;
+                    Angular.</span
+                  >
+                </li>
+                <li><span class="tick">[03]</span><span>GitHub Star.</span></li>
+                <li>
+                  <span class="tick">[04]</span
+                  ><span>Creadora de contenido.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 02 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="03 Problema UX">
+        <div class="frame">
+          <div
+            style="
+              position: absolute;
+              top: 100px;
+              right: 90px;
+              z-index: 0;
+              opacity: 0.45;
+            "
+          >
+            <div class="wf-sphere red" style="width: 220px; height: 220px">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+              <div class="ring r4"></div>
+              <div class="ring r5"></div>
+              <div class="core"></div>
+            </div>
+          </div>
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            El chatbot <span class="magenta">no siempre</span> es la respuesta
+          </h1>
+
+          <div class="problem-grid">
+            <div class="problem-body">
+              <p>
+                Hoy cada empresa monta un <span class="hl">chatbot</span> sobre
+                su propio modelo: soporte, FAQ, dudas de producto. Pero el
+                usuario sigue cargando con todo el trabajo.
+              </p>
+              <p>
+                Sale del flujo, abre el widget, redacta la pregunta, espera la
+                respuesta y vuelve a ubicarse en la pantalla. Eso
+                <span class="hl">también es carga cognitiva</span>.
+              </p>
+              <p
+                class="mono"
+                style="
+                  font-size: 24px;
+                  color: var(--ink-dim);
+                  letter-spacing: 0.08em;
+                "
+              >
+                >&nbsp; UX: USER_DOES_THE_WORK — MODEL_LIVES_FAR_AWAY
+              </p>
+            </div>
+
+            <div class="alert-panel">
+              <div class="alert-head">
+                <span class="blink"></span><span>[!] CHATBOT FATIGUE</span>
+              </div>
+              <ul class="alert-list">
+                <li>
+                  <b>Context switching</b> — abrir el widget, perder de vista el
+                  componente.
+                </li>
+                <li>
+                  <b>El usuario redacta la pregunta</b> — la app ya sabe qué
+                  está mirando.
+                </li>
+                <li>
+                  <b>Round-trip de red + tokens</b> — latencia y costo por cada
+                  duda.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 03 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="04 Propuesta">
+        <div class="mesh-bg" style="opacity: 0.3"></div>
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            La idea: un <span class="cyan">panel contextual</span>, no otro
+            chatbot
+          </h1>
+
+          <div class="vs-grid">
+            <div class="vs-col old">
+              <div class="vs-label">// el camino largo</div>
+              <h3>Chatbot tradicional</h3>
+              <ul>
+                <li>Widget separado del componente.</li>
+                <li>El usuario redacta y espera.</li>
+                <li>Modelo en la nube, tokens, latencia.</li>
+                <li>JS pesado, librería de tooltips, z-index war.</li>
+              </ul>
+              <div class="vs-tags">
+                <code>Cloud LLM</code>
+                <code>WebSocket</code>
+                <code>JS framework</code>
+              </div>
+            </div>
+
+            <div class="vs-arrow">
+              <div class="big">→</div>
+              <div>shift</div>
+            </div>
+
+            <div class="vs-col">
+              <div class="vs-label">// el camino ligero</div>
+              <h3>Panel contextual nativo</h3>
+              <ul>
+                <li>Anclado al componente que el usuario mira.</li>
+                <li>Se abre con la transición, no con un click extra.</li>
+                <li>Modelo local, sin red, sin tokens.</li>
+                <li>CSS moderno + Web APIs del navegador.</li>
+              </ul>
+              <div class="vs-tags">
+                <code>anchor-name</code>
+                <code>popover</code>
+                <code>view-transition</code>
+                <code>Summarizer</code>
+                <code>LanguageModel</code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 04 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="05 Ecosistema">
+        <div class="mesh-bg" style="opacity: 0.3"></div>
+        <div class="frame">
+          <div
+            style="
+              position: absolute;
+              top: 84px;
+              right: 120px;
+              perspective: 800px;
+              z-index: 0;
+              opacity: 0.55;
+            "
+          >
+            <div class="wf-cube" style="width: 130px; height: 130px">
+              <div class="face f1" style="transform: translateZ(65px)"></div>
+              <div
+                class="face f2"
+                style="transform: rotateY(180deg) translateZ(65px)"
+              ></div>
+              <div
+                class="face f3"
+                style="transform: rotateY(90deg) translateZ(65px)"
+              ></div>
+              <div
+                class="face f4"
+                style="transform: rotateY(-90deg) translateZ(65px)"
+              ></div>
+              <div
+                class="face f5"
+                style="transform: rotateX(90deg) translateZ(65px)"
+              ></div>
+              <div
+                class="face f6"
+                style="transform: rotateX(-90deg) translateZ(65px)"
+              ></div>
+            </div>
+          </div>
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">Roadmap del <span class="cyan">taller</span></h1>
+
+          <div class="eco-grid">
+            <div class="eco-matrix mag">
+              <div class="lane mag">// LAYER_A — MODERN UI</div>
+              <h3>Capa de UI moderna</h3>
+              <div class="eco-tech">
+                <div class="row">
+                  <div class="idx">01</div>
+                  <div>
+                    <div class="name">CSS Anchor Positioning</div>
+                    <div class="sub">Acoplamiento geométrico declarativo.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="idx">02</div>
+                  <div>
+                    <div class="name">View Transitions API</div>
+                    <div class="sub">Snapshots del DOM, fluidez nativa.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="idx">03</div>
+                  <div>
+                    <div class="name">Popover &amp; Dialog</div>
+                    <div class="sub">Top Layer nativo · a11y de serie.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="eco-matrix">
+              <div class="lane">// LAYER_B — BUILT-IN AI</div>
+              <h3>Capa de inteligencia</h3>
+              <div class="eco-tech">
+                <div class="row">
+                  <div class="idx">04</div>
+                  <div>
+                    <div class="name">Summarizer API</div>
+                    <div class="sub">
+                      Destila el DOM en TL;DR &amp; key-points.
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="idx">05</div>
+                  <div>
+                    <div class="name">Prompt API (LanguageModel)</div>
+                    <div class="sub">
+                      Razonamiento conversacional sobre la UI.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 05 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="08 Anchor Positioning">
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            CSS <span class="cyan">Anchor</span> Positioning
+          </h1>
+
+          <div class="code-dive">
+            <div class="copy-col">
+              <p>
+                Acopla un elemento flotante a otro de forma <b>declarativa</b>.
+                Tres capacidades nucleares (MDN):
+              </p>
+
+              <div class="anchor-features">
+                <div class="af">
+                  <div class="af-k">01 · ASOCIAR</div>
+                  <div class="af-d">
+                    <code>anchor-name</code> en el ancla ·
+                    <code>position-anchor</code> en el flotante.
+                  </div>
+                </div>
+                <div class="af">
+                  <div class="af-k">02 · POSICIONAR</div>
+                  <div class="af-d">
+                    <code>position-area</code> con keywords (<code>top</code>,
+                    <code>bottom span-inline</code>…) o la función
+                    <code>anchor()</code>.
+                  </div>
+                </div>
+                <div class="af">
+                  <div class="af-k">03 · SOBREVIVIR</div>
+                  <div class="af-d">
+                    <code>position-try-fallbacks</code> para reubicar si se sale
+                    del viewport.
+                  </div>
+                </div>
+              </div>
+
+              <div class="anchor-live">
+                <p id="anchor-src">Párrafo activo — ancla del popover.</p>
+
+                <button
+                  class="demo-run-btn cy"
+                  popovertarget="anchor-pop"
+                  id="anchor-trigger"
+                >
+                  Ver demo en vivo
+                </button>
+                <span class="demo-live-tag" style="color: var(--grid-cyan)"
+                  >// CSS only · zero JS</span
+                >
+
+                <div id="anchor-pop" popover="auto" class="anchor-pop">
+                  <div class="body">
+                    <b>// help panel</b><br />
+                    Anclado a <code>#anchor-src</code>.<br />
+                    <span style="color: var(--grid-cyan)"
+                      >position-area: right span-block;</span
+                    >
+                  </div>
+                </div>
+                <div class="anchor-fallback" id="anchor-fallback">
+                  ⚠ Anchor positioning aún no está disponible en este navegador.
+                </div>
+              </div>
+            </div>
+
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>anchor.css · mdn.io/anchor-positioning</div>
+              </div>
+              <pre
+                class="code-block"
+              ><span class="tok-com">/* 1. Declarar el ancla */</span>
+<span class="tok-fn">#active</span> {
+  <span class="tok-key">anchor-name</span>: <span class="tok-str">--active</span>;
+}
+
+<span class="tok-com">/* 2. Asociar y posicionar */</span>
+<span class="tok-fn">#help-panel</span> {
+  <span class="tok-key">position</span>: <span class="tok-str">fixed</span>;
+  <span class="tok-key">position-anchor</span>: <span class="tok-str">--active</span>;
+  <span class="tok-key">position-area</span>: <span class="tok-str">right span-block</span>;
+  <span class="tok-key">margin-inline-start</span>: <span class="tok-num">16px</span>;
+
+  <span class="tok-com">/* 3. Reubicar si overflowea */</span>
+  <span class="tok-key">position-try-fallbacks</span>:
+    <span class="tok-str">flip-block</span>, <span class="tok-str">flip-inline</span>;
+}
+
+<span class="tok-com">/* O con la función anchor() */</span>
+<span class="tok-fn">.tooltip</span> {
+  <span class="tok-key">top</span>: <span class="tok-fn">anchor</span>(<span class="tok-str">--active bottom</span>);
+  <span class="tok-key">width</span>: <span class="tok-fn">anchor-size</span>(<span class="tok-str">--active width</span>);
+}</pre>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 06 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="09 View Transitions">
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            View Transitions <span class="magenta">API</span>
+          </h1>
+
+          <div class="vt-grid">
+            <div>
+              <p
+                style="
+                  font-size: 26px;
+                  line-height: 1.4;
+                  color: var(--ink);
+                  margin: 0 0 16px 0;
+                "
+              >
+                El navegador toma <b>snapshots automáticos</b> del DOM antes y
+                después de la mutación, y los interpola. Funciona en SPA y MPA
+                (MDN).
+              </p>
+
+              <div class="vt-features">
+                <div class="vtf vtf-active">
+                  <div class="vtf-k">01 · SPA — SINGLE PAGE APP</div>
+                  <div class="vtf-d">
+                    <code>document.startViewTransition(cb)</code> envuelve una
+                    mutación del DOM.
+                    <b style="color: #5cffb4">Es lo que usa el panel.</b>
+                  </div>
+                </div>
+                <div class="vtf vtf-dim">
+                  <div class="vtf-k">02 · MPA — MULTI-PAGE APP</div>
+                  <div class="vtf-d">
+                    At-rule <code>@view-transition</code> activa transiciones
+                    <b>entre páginas distintas</b>. No aplica a nuestro panel.
+                  </div>
+                </div>
+                <div class="vtf vtf-dim">
+                  <div class="vtf-k">03 · CUSTOM</div>
+                  <div class="vtf-d">
+                    <code>view-transition-name</code> aísla elementos.
+                    Pseudo-elementos
+                    <code>::view-transition-old / new</code> orquestan el
+                    detalle.
+                  </div>
+                </div>
+              </div>
+
+              <div class="vt-visual" style="margin-top: 18px">
+                <div class="vt-card vt-help" id="vt-card">
+                  <div class="tag" id="vt-tag">// HELP-PANEL · EMPTY</div>
+                  <div class="vt-help-body" id="vt-body-wrap">
+                    <div class="vt-skel">
+                      <div class="vt-skel-bar w90"></div>
+                      <div class="vt-skel-bar w70"></div>
+                      <div class="vt-skel-bar w80"></div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+                    align-items: flex-start;
+                    justify-content: center;
+                  "
+                >
+                  <button class="demo-run-btn" id="vt-trigger">
+                    Inyectar resumen
+                  </button>
+                  <span class="demo-live-tag">// startViewTransition</span>
+                </div>
+                <div class="vt-arrow">
+                  <span class="arr"></span>snapshot &amp; interpolate<span
+                    class="arr"
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="code-frame" style="align-self: start">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>view-transitions · mdn.io/view-transition-api</div>
+              </div>
+              <pre
+                class="code-block"
+              ><span class="tok-com">// SPA — panel en la misma página</span>
+<span class="tok-key">function</span> <span class="tok-fn">openHelpPanel</span>(<span class="tok-var">summary</span>) {
+  <span class="tok-com">// Fallback si no hay soporte</span>
+  <span class="tok-key">if</span> (!<span class="tok-var">document</span>.<span class="tok-var">startViewTransition</span>) {
+    <span class="tok-fn">render</span>(<span class="tok-var">summary</span>); <span class="tok-key">return</span>;
+  }
+  <span class="tok-var">document</span>.<span class="tok-fn">startViewTransition</span>(
+    () =&gt; <span class="tok-fn">render</span>(<span class="tok-var">summary</span>)
+  );
+}
+
+<span class="tok-com">/* Aislar el panel del resto */</span>
+<span class="tok-fn">#help-panel</span> {
+  <span class="tok-key">view-transition-name</span>: <span class="tok-str">help</span>;
+}
+<span class="tok-fn">::view-transition-old</span>(<span class="tok-str">help</span>),
+<span class="tok-fn">::view-transition-new</span>(<span class="tok-str">help</span>) {
+  <span class="tok-key">animation-duration</span>: <span class="tok-num">280ms</span>;
+}
+
+<span class="tok-com">/* A11y: prefers-reduced-motion → none */</span></pre>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 07 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="10 Popover Dialog">
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            UI Nativa: <span class="cyan">Popover</span> &amp;
+            <span class="magenta">Dialog</span>
+          </h1>
+
+          <div class="pop-grid">
+            <div style="display: flex; flex-direction: column; gap: 28px">
+              <div class="pop-feature">
+                <div class="k">// TOP LAYER</div>
+                <h3>Adiós a las peleas con z-index</h3>
+                <p>
+                  El navegador gestiona un "Top Layer" propio para popovers y
+                  diálogos modales. Siempre por encima — sin hacks.
+                </p>
+              </div>
+              <div class="pop-feature">
+                <div class="k">// ACCESSIBILITY</div>
+                <h3>A11y out-of-the-box</h3>
+                <p>
+                  Light Dismiss con <b>Escape</b> o click fuera. Focus Trapping
+                  semántico, sin polyfills.
+                </p>
+              </div>
+            </div>
+
+            <div class="pop-stack">
+              <div class="top-bar">
+                <div>
+                  <div class="tag">// Top Layer (managed by browser)</div>
+                  <div style="margin-top: 4px">
+                    &lt;dialog&gt; · &lt;div popover&gt;
+                  </div>
+                </div>
+                <b>SIEMPRE ARRIBA</b>
+              </div>
+
+              <div class="gap-row">
+                <div class="arr">↑</div>
+                <div>Por encima del DOM stacking context</div>
+              </div>
+
+              <div class="z-bar">
+                <span class="sel">.dropdown</span
+                ><span class="z">z-index: 99999 !important</span>
+              </div>
+              <div class="z-bar">
+                <span class="sel">.tooltip</span
+                ><span class="z">z-index: 99999</span>
+              </div>
+              <div class="z-bar">
+                <span class="sel">.toast</span
+                ><span class="z">z-index: 9999</span>
+              </div>
+              <div class="z-bar">
+                <span class="sel">.modal-old</span
+                ><span class="z">z-index: 999</span>
+              </div>
+
+              <div class="doc-flow">// document flow</div>
+
+              <div class="pop-demo">
+                <button
+                  class="demo-run-btn"
+                  popovertarget="real-popover"
+                  id="pop-trigger"
+                >
+                  Abrir popover
+                </button>
+                <span class="demo-live-tag">// native &lt;div popover&gt;</span>
+              </div>
+
+              <pre
+                class="pop-mini-code"
+              ><span style="color:#7892c4">&lt;!-- markup --&gt;</span>
+&lt;<span style="color:#ff8ad4">button</span> <span style="color:#00f2ff">popovertarget</span>=<span style="color:#c8ffb4">"menu"</span>&gt;Abrir&lt;/<span style="color:#ff8ad4">button</span>&gt;
+&lt;<span style="color:#ff8ad4">div</span> <span style="color:#00f2ff">id</span>=<span style="color:#c8ffb4">"menu"</span> <span style="color:#00f2ff">popover</span>=<span style="color:#c8ffb4">"auto"</span>&gt;…&lt;/<span style="color:#ff8ad4">div</span>&gt;</pre>
+
+              <div id="real-popover" popover="auto" class="real-pop">
+                <div class="body">
+                  <h4>// Soy un popover nativo</h4>
+                  <p>
+                    Vivo en el
+                    <b style="color: var(--grid-cyan)">Top Layer</b> del
+                    navegador.
+                  </p>
+                  <p>Pulsa <kbd>Esc</kbd> o haz click fuera para cerrar.</p>
+                  <p style="color: var(--ink-dim); margin-top: 10px">
+                    Focus trapping automático · cero JS.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 08 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="06 Summarizer API">
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">Summarizer <span class="cyan">API</span></h1>
+
+          <div class="code-dive">
+            <div class="copy-col">
+              <p style="font-size: 24px; line-height: 1.4; margin: 0 0 14px 0">
+                Resume cualquier texto del DOM usando el
+                <b>modelo interno del navegador</b>. Promise-based (MDN).
+              </p>
+
+              <div class="vt-features">
+                <div class="vtf vtf-active">
+                  <div class="vtf-k">01 · STATIC METHODS</div>
+                  <div class="vtf-d">
+                    <code>Summarizer.availability(opts)</code> y
+                    <code>Summarizer.create(opts)</code>. Estados:
+                    <code>available</code>, <code>downloading</code>,
+                    <code>unavailable</code>.
+                  </div>
+                </div>
+                <div class="vtf">
+                  <div class="vtf-k">02 · OPCIONES</div>
+                  <div class="vtf-d">
+                    <code>type</code>: <code>tldr</code> ·
+                    <code>key-points</code> · <code>teaser</code> ·
+                    <code>headline</code>. <code>length</code>,
+                    <code>format</code>, <code>sharedContext</code>,
+                    <code>expectedInputLanguages</code>,
+                    <code>outputLanguage</code>.
+                  </div>
+                </div>
+                <div class="vtf">
+                  <div class="vtf-k">03 · INSTANCE METHODS</div>
+                  <div class="vtf-d">
+                    <code>summarize(text)</code> → string ·
+                    <code>summarizeStreaming(text)</code> →
+                    <b>ReadableStream</b> · <code>measureInputUsage()</code> ·
+                    <code>destroy()</code>.
+                  </div>
+                </div>
+              </div>
+
+              <div class="api-notes">
+                <div class="api-note">
+                  <b>!</b> <b>HTTPS</b> +
+                  <b>transient user activation</b> (click reciente).
+                </div>
+                <div class="api-note">
+                  <b>!</b> <b>monitor()</b> reporta
+                  <code>downloadprogress</code> mientras el modelo se descarga.
+                </div>
+                <div class="api-note">
+                  <b>!</b> Cancela con <code>ctrl.abort()</code> al cerrar el
+                  panel; libera con <code>destroy()</code>.
+                </div>
+              </div>
+            </div>
+
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>summarizer · mdn.io/summarizer-api</div>
+              </div>
+              <pre
+                class="code-block summary-code"
+              ><span class="tok-com">// 1. Disponibilidad del modelo</span>
+<span class="tok-key">if</span> (!(<span class="tok-str">'Summarizer'</span> <span class="tok-key">in</span> <span class="tok-var">self</span>)) <span class="tok-key">return</span>;
+<span class="tok-key">const</span> <span class="tok-var">av</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">availability</span>();
+<span class="tok-key">if</span> (<span class="tok-var">av</span> === <span class="tok-str">'unavailable'</span>) <span class="tok-key">return</span>;
+
+<span class="tok-com">// 2. Crear (monitor + AbortController)</span>
+<span class="tok-key">const</span> <span class="tok-var">ctrl</span> = <span class="tok-key">new</span> <span class="tok-fn">AbortController</span>();
+<span class="tok-key">const</span> <span class="tok-var">sum</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">create</span>({
+  <span class="tok-var">type</span>: <span class="tok-str">'key-points'</span>, <span class="tok-var">length</span>: <span class="tok-str">'short'</span>,
+  <span class="tok-var">format</span>: <span class="tok-str">'markdown'</span>,
+  <span class="tok-var">sharedContext</span>: <span class="tok-str">'Asistente UX.'</span>,
+  <span class="tok-var">expectedInputLanguages</span>: [<span class="tok-str">'es'</span>],
+  <span class="tok-var">signal</span>: <span class="tok-var">ctrl</span>.<span class="tok-var">signal</span>,
+  <span class="tok-fn">monitor</span>: <span class="tok-var">m</span> =&gt; <span class="tok-var">m</span>.<span class="tok-fn">addEventListener</span>(
+    <span class="tok-str">'downloadprogress'</span>, <span class="tok-var">e</span> =&gt; <span class="tok-fn">setProgress</span>(<span class="tok-var">e</span>.<span class="tok-var">loaded</span>)
+  ),
+});
+
+<span class="tok-com">// 3. Streaming directo al panel</span>
+<span class="tok-key">for await</span> (<span class="tok-key">const</span> <span class="tok-var">c</span> <span class="tok-key">of</span> <span class="tok-var">sum</span>.<span class="tok-fn">summarizeStreaming</span>(<span class="tok-var">text</span>)) {
+  <span class="tok-var">panel</span>.<span class="tok-var">textContent</span> += <span class="tok-var">c</span>;
+}
+
+<span class="tok-com">// 4. Cancelar + liberar al cerrar</span>
+<span class="tok-var">panel</span>.<span class="tok-fn">addEventListener</span>(<span class="tok-str">'toggle'</span>, <span class="tok-var">e</span> =&gt;
+  <span class="tok-var">e</span>.<span class="tok-var">newState</span> === <span class="tok-str">'closed'</span> &amp;&amp; (<span class="tok-var">ctrl</span>.<span class="tok-fn">abort</span>(), <span class="tok-var">sum</span>.<span class="tok-fn">destroy</span>())
+);</pre>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 09 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="07 Prompt API">
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">Prompt <span class="magenta">API</span></h1>
+
+          <div class="code-dive">
+            <div class="copy-col">
+              <p style="font-size: 24px; line-height: 1.4; margin: 0 0 14px 0">
+                Razonamiento local sobre el DOM con
+                <b>sesiones conversacionales</b>. Multimodal: texto, imagen y
+                audio (Chrome docs).
+              </p>
+
+              <div class="vt-features">
+                <div class="vtf vtf-active">
+                  <div class="vtf-k">01 · STATIC METHODS</div>
+                  <div class="vtf-d">
+                    <code>LanguageModel.availability(opts)</code> y
+                    <code>LanguageModel.create(opts)</code> — comparten las
+                    mismas opciones.
+                  </div>
+                </div>
+                <div class="vtf">
+                  <div class="vtf-k">02 · SESSION SETUP</div>
+                  <div class="vtf-d">
+                    <code>initialPrompts</code>:
+                    <code>system</code
+                    >/<code>user</code>/<code>assistant</code>.
+                    <code>expectedInputs</code>:
+                    <code>text</code>/<code>image</code>/<code>audio</code>.
+                    <code>monitor</code>, <code>signal</code>,
+                    <code>responseConstraint</code> (JSON Schema).
+                  </div>
+                </div>
+                <div class="vtf">
+                  <div class="vtf-k">03 · SESSION INSTANCE</div>
+                  <div class="vtf-d">
+                    <code>prompt(text)</code> ·
+                    <code>promptStreaming(text)</code> → <b>ReadableStream</b> ·
+                    <code>append()</code> · <code>clone()</code> ·
+                    <code>measureInputUsage()</code> · <code>destroy()</code>.
+                  </div>
+                </div>
+              </div>
+
+              <div class="api-notes">
+                <div class="api-note">
+                  <b>!</b> Inputs: <b>texto, imagen, audio</b>. Output:
+                  <b>solo texto</b>.
+                </div>
+                <div class="api-note">
+                  <b>!</b> Monitorea: <code>session.contextUsage</code> /
+                  <code>session.contextWindow</code>. Escucha
+                  <code>'contextoverflow'</code>.
+                </div>
+                <div class="api-note">
+                  <b>!</b> En iframes cross-origin:
+                  <code>allow="language-model"</code>. No funciona en Web
+                  Workers.
+                </div>
+              </div>
+            </div>
+
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>prompt · developer.chrome.com/docs/ai/prompt-api</div>
+              </div>
+              <pre
+                class="code-block summary-code"
+              ><span class="tok-com">// 1. Disponibilidad (mismas opts que create)</span>
+<span class="tok-key">const</span> <span class="tok-var">av</span> = <span class="tok-key">await</span> <span class="tok-var">LanguageModel</span>.<span class="tok-fn">availability</span>();
+<span class="tok-key">if</span> (<span class="tok-var">av</span> === <span class="tok-str">'unavailable'</span>) <span class="tok-key">return</span>;
+
+<span class="tok-com">// 2. Sesión con system prompt + monitor</span>
+<span class="tok-key">const</span> <span class="tok-var">ctrl</span> = <span class="tok-key">new</span> <span class="tok-fn">AbortController</span>();
+<span class="tok-key">const</span> <span class="tok-var">session</span> = <span class="tok-key">await</span> <span class="tok-var">LanguageModel</span>.<span class="tok-fn">create</span>({
+  <span class="tok-var">expectedInputs</span>: [{ <span class="tok-var">type</span>: <span class="tok-str">'text'</span>, <span class="tok-var">languages</span>: [<span class="tok-str">'es'</span>] }],
+  <span class="tok-var">initialPrompts</span>: [
+    { <span class="tok-var">role</span>: <span class="tok-str">'system'</span>,
+      <span class="tok-var">content</span>: <span class="tok-str">'Asistente UX. Responde en 2 frases.'</span> },
+    { <span class="tok-var">role</span>: <span class="tok-str">'user'</span>,
+      <span class="tok-var">content</span>: <span class="tok-str">`Contexto: ${active.innerText}`</span> },
+  ],
+  <span class="tok-var">signal</span>: <span class="tok-var">ctrl</span>.<span class="tok-var">signal</span>,
+  <span class="tok-fn">monitor</span>: <span class="tok-var">m</span> =&gt; <span class="tok-var">m</span>.<span class="tok-fn">addEventListener</span>(
+    <span class="tok-str">'downloadprogress'</span>, <span class="tok-var">e</span> =&gt; <span class="tok-fn">setProgress</span>(<span class="tok-var">e</span>.<span class="tok-var">loaded</span>)
+  ),
+});
+
+<span class="tok-com">// 3. Streaming directo al panel</span>
+<span class="tok-key">for await</span> (<span class="tok-key">const</span> <span class="tok-var">c</span> <span class="tok-key">of</span> <span class="tok-var">session</span>.<span class="tok-fn">promptStreaming</span>(<span class="tok-var">q</span>)) {
+  <span class="tok-var">help</span>.<span class="tok-var">textContent</span> += <span class="tok-var">c</span>;
+}
+
+<span class="tok-com">// 4. Cleanup al cerrar el panel</span>
+<span class="tok-var">panel</span>.<span class="tok-fn">addEventListener</span>(<span class="tok-str">'toggle'</span>, <span class="tok-var">e</span> =&gt;
+  <span class="tok-var">e</span>.<span class="tok-var">newState</span> === <span class="tok-str">'closed'</span> &amp;&amp; (<span class="tok-var">ctrl</span>.<span class="tok-fn">abort</span>(), <span class="tok-var">session</span>.<span class="tok-fn">destroy</span>())
+);</pre>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 10 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="Más APIs">
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            Hay más: el <span class="cyan">ecosistema</span> built-in AI
+          </h1>
+
+          <p
+            style="
+              font-size: 24px;
+              line-height: 1.4;
+              color: var(--ink-dim);
+              margin: 0 0 24px 0;
+            "
+          >
+            En esta charla solo usamos
+            <b style="color: var(--grid-cyan)">Summarizer</b> y
+            <b style="color: var(--accent-magenta)">Prompt</b> para el panel.
+            Pero el navegador trae más APIs de IA que podés combinar:
+          </p>
+
+          <div class="more-apis">
+            <div class="ma">
+              <div class="num">// 01 — DETECTION</div>
+              <h4>Language Detector</h4>
+              <p>
+                Detecta el idioma de cualquier texto del DOM. Ideal antes de
+                traducir.
+              </p>
+              <code>LanguageDetector.detect(text)</code>
+            </div>
+
+            <div class="ma">
+              <div class="num">// 02 — TRANSLATION</div>
+              <h4>Translator</h4>
+              <p>Traduce offline entre idiomas con language packs locales.</p>
+              <code>Translator.create({source, target})</code>
+            </div>
+
+            <div class="ma">
+              <div class="num">// 03 — GENERATION</div>
+              <h4>Writer</h4>
+              <p>
+                Genera texto nuevo: emails, reseñas, borradores. Tono y longitud
+                configurables.
+              </p>
+              <code>writer.write(prompt, { context })</code>
+            </div>
+
+            <div class="ma">
+              <div class="num">// 04 — REVISION</div>
+              <h4>Rewriter</h4>
+              <p>
+                Refactoriza tono y longitud de texto existente: más formal, más
+                casual, más corto.
+              </p>
+              <code>rewriter.rewrite(text, { tone })</code>
+            </div>
+
+            <div class="ma">
+              <div class="num">// 05 — PROOFREAD</div>
+              <h4>Proofreader</h4>
+              <p>
+                Corrige gramática, ortografía y puntuación. Devuelve
+                correcciones con etiquetas.
+              </p>
+              <code>proofreader.proofread(text)</code>
+            </div>
+
+            <div class="ma">
+              <div class="num">// 06 — Y MÁS</div>
+              <h4>Y aún más en camino</h4>
+              <p>
+                Multimodal Prompt (audio + imagen), structured output con JSON
+                Schema, fine-tuning con LoRA…
+              </p>
+              <code>developer.chrome.com/docs/ai</code>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 11 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="04 Arquitectura">
+        <div class="mesh-bg" style="opacity: 0.3"></div>
+        <div class="frame">
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            Arquitectura: <span class="cyan">in-browser inference</span>
+          </h1>
+
+          <div class="arch-wrap">
+            <div class="pipeline">
+              <div class="pipe-step">
+                <div class="pipe-num">01</div>
+                <div class="pipe-body">
+                  <div class="label">// UI EVENT</div>
+                  <div class="name">El usuario activa el panel contextual</div>
+                  <div class="sub">
+                    Click, hover o foco sobre un bloque del DOM.
+                  </div>
+                </div>
+                <div class="pipe-tech">DOM event</div>
+              </div>
+
+              <div class="pipe-step">
+                <div class="pipe-num">02</div>
+                <div class="pipe-body">
+                  <div class="label">// FEATURE DETECT</div>
+                  <div class="name">El browser valida la API local</div>
+                  <div class="sub">
+                    <code class="mono" style="color: var(--grid-cyan)"
+                      >'Summarizer' in self</code
+                    >
+                    →
+                    <code class="mono" style="color: var(--grid-cyan)"
+                      >Summarizer.availability()</code
+                    >.
+                  </div>
+                </div>
+                <div class="pipe-tech">globals</div>
+              </div>
+
+              <div class="pipe-step engine">
+                <div class="pipe-num">03</div>
+                <div class="pipe-body">
+                  <div class="label">// MODEL READY</div>
+                  <div class="name">Gemini Nano on-device</div>
+                  <div class="sub">
+                    Pesos cacheados (~1.5 GB). Si falta:
+                    <code class="mono" style="color: var(--accent-magenta)"
+                      >monitor</code
+                    >
+                    emite
+                    <code class="mono" style="color: var(--accent-magenta)"
+                      >downloadprogress</code
+                    >.
+                  </div>
+                </div>
+                <div class="pipe-tech">WebGPU</div>
+              </div>
+
+              <div class="pipe-step engine">
+                <div class="pipe-num">04</div>
+                <div class="pipe-body">
+                  <div class="label">// INFERENCE</div>
+                  <div class="name">El DOM se tokeniza en local</div>
+                  <div class="sub">
+                    <code class="mono" style="color: var(--accent-magenta)"
+                      >summarizeStreaming()</code
+                    >
+                    →
+                    <code class="mono" style="color: var(--accent-magenta)"
+                      >ReadableStream</code
+                    >.
+                  </div>
+                </div>
+                <div class="pipe-tech">streaming</div>
+              </div>
+
+              <div class="pipe-step">
+                <div class="pipe-num">05</div>
+                <div class="pipe-body">
+                  <div class="label">// DOM MUTATION</div>
+                  <div class="name">La respuesta se inyecta en el panel</div>
+                  <div class="sub">
+                    Envuelta en
+                    <code class="mono" style="color: var(--grid-cyan)"
+                      >startViewTransition()</code
+                    >. Cero red.
+                  </div>
+                </div>
+                <div class="pipe-tech">0 network</div>
+              </div>
+
+              <div class="pipe-step">
+                <div class="pipe-num">06</div>
+                <div class="pipe-body">
+                  <div class="label">// CLEANUP</div>
+                  <div class="name">Liberar al cerrar el panel</div>
+                  <div class="sub">
+                    Listener
+                    <code class="mono" style="color: var(--grid-cyan)"
+                      >'toggle'</code
+                    >
+                    →
+                    <code class="mono" style="color: var(--grid-cyan)"
+                      >ctrl.abort()</code
+                    >
+                    +
+                    <code class="mono" style="color: var(--grid-cyan)"
+                      >destroy()</code
+                    >.
+                  </div>
+                </div>
+                <div class="pipe-tech">no leaks</div>
+              </div>
+            </div>
+
+            <div class="benefits">
+              <div class="benefit-card">
+                <div class="k">// 01 — Latency</div>
+                <div class="v">Latencia Cero</div>
+                <div class="d">Inferencia instantánea, sin saltos de red.</div>
+              </div>
+              <div class="benefit-card">
+                <div class="k">// 02 — Cost</div>
+                <div class="v">Costo Cero</div>
+                <div class="d">Cómputo delegado al hardware del cliente.</div>
+              </div>
+              <div class="benefit-card">
+                <div class="k">// 03 — Privacy</div>
+                <div class="v">Privacidad 100%</div>
+                <div class="d">Los datos nunca viajan a ningún servidor.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 12 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="Aplicado · Markup + CSS">
+        <div class="frame">
+          <div class="eyebrow">// MANOS A LA OBRA · PASO 1 DE 2</div>
+          <h1 class="title">
+            Construyámoslo: <span class="cyan">HTML + CSS</span> del menú
+          </h1>
+
+          <div class="applied-grid">
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>menu.html</div>
+              </div>
+              <pre
+                class="code-block"
+              ><span class="tok-com">&lt;!-- Bloque del DOM que sirve de ancla --&gt;</span>
+&lt;<span class="tok-fn">p</span> <span class="tok-key">id</span>=<span class="tok-str">"active"</span>&gt;Texto sobre el que el usuario pide ayuda…&lt;/<span class="tok-fn">p</span>&gt;
+
+<span class="tok-com">&lt;!-- Trigger nativo, sin librería de tooltips --&gt;</span>
+&lt;<span class="tok-fn">button</span> <span class="tok-key">popovertarget</span>=<span class="tok-str">"ctx-menu"</span>&gt;
+  Explicar este bloque
+&lt;/<span class="tok-fn">button</span>&gt;
+
+<span class="tok-com">&lt;!-- Top Layer del navegador --&gt;</span>
+&lt;<span class="tok-fn">div</span> <span class="tok-key">id</span>=<span class="tok-str">"ctx-menu"</span> <span class="tok-key">popover</span>=<span class="tok-str">"auto"</span>&gt;
+  &lt;<span class="tok-fn">output</span> <span class="tok-key">id</span>=<span class="tok-str">"ai-out"</span>&gt;&lt;/<span class="tok-fn">output</span>&gt;
+&lt;/<span class="tok-fn">div</span>&gt;</pre>
+            </div>
+
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>menu.css</div>
+              </div>
+              <pre
+                class="code-block"
+              ><span class="tok-com">/* 1. El párrafo expone un ancla */</span>
+<span class="tok-fn">#active</span> { <span class="tok-key">anchor-name</span>: <span class="tok-str">--active</span>; }
+
+<span class="tok-com">/* 2. El popover se acopla al ancla */</span>
+<span class="tok-fn">#ctx-menu</span> {
+  <span class="tok-key">position</span>: <span class="tok-str">fixed</span>;
+  <span class="tok-key">position-anchor</span>: <span class="tok-str">--active</span>;
+  <span class="tok-key">position-area</span>: <span class="tok-str">right span-block</span>;
+  <span class="tok-key">margin-inline-start</span>: <span class="tok-num">16px</span>;
+  <span class="tok-key">view-transition-name</span>: <span class="tok-str">ctx-menu</span>;
+}
+
+<span class="tok-com">/* 3. Animación nativa entrada/salida */</span>
+<span class="tok-fn">::view-transition-old</span>(<span class="tok-str">ctx-menu</span>),
+<span class="tok-fn">::view-transition-new</span>(<span class="tok-str">ctx-menu</span>) {
+  <span class="tok-key">animation-duration</span>: <span class="tok-num">260ms</span>;
+}</pre>
+            </div>
+          </div>
+
+          <div class="applied-caption">
+            <span class="chip">popover=auto</span>
+            <span class="chip">anchor-name</span>
+            <span class="chip">position-area</span>
+            <span class="chip mag">view-transition-name</span>
+            <span style="margin-left: 6px"
+              >// Cero JS para posicionar, cero z-index, cero listeners.</span
+            >
+          </div>
+
+          <div class="applied-demo-row">
+            <span id="applied-anchor">Párrafo activo del DOM</span>
+            <button
+              class="demo-run-btn"
+              popovertarget="applied-menu"
+              id="applied-trigger"
+            >
+              Abrir menú contextual
+            </button>
+            <span class="demo-live-tag"
+              >// anchor + popover + view-transition</span
+            >
+          </div>
+
+          <div id="applied-menu" popover="auto">
+            <div class="body">
+              <div class="k">// Resumen · key-points</div>
+              Bloque activo anclado y resumido localmente:
+              <ul>
+                <li>Configura el runtime del cliente.</li>
+                <li>Valida memoria y red por release.</li>
+                <li>Sin abandonar la vista.</li>
+              </ul>
+              <div
+                style="
+                  color: var(--grid-cyan);
+                  margin-top: 10px;
+                  font-size: 14px;
+                "
+              >
+                // anchored to #applied-anchor · 0 network
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 13 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="Aplicado · IA + Streaming">
+        <div class="frame">
+          <div class="eyebrow">// MANOS A LA OBRA · PASO 2 DE 2</div>
+          <h1 class="title">
+            Construyámoslo: <span class="magenta">IA + streaming</span> al panel
+          </h1>
+
+          <div class="applied-grid">
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>summarize-on-open.ts</div>
+              </div>
+              <pre
+                class="code-block"
+              ><span class="tok-com">// 1. Feature detection estricto</span>
+<span class="tok-key">if</span> (!(<span class="tok-str">'Summarizer'</span> <span class="tok-key">in</span> <span class="tok-var">self</span>)) <span class="tok-key">return</span>;
+<span class="tok-key">const</span> <span class="tok-var">status</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">availability</span>();
+<span class="tok-key">if</span> (<span class="tok-var">status</span> !== <span class="tok-str">'available'</span>) <span class="tok-key">return</span>;
+
+<span class="tok-com">// 2. Sesión local con contexto compartido</span>
+<span class="tok-key">const</span> <span class="tok-var">summarizer</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">create</span>({
+  <span class="tok-var">type</span>: <span class="tok-str">'key-points'</span>,
+  <span class="tok-var">length</span>: <span class="tok-str">'short'</span>,
+  <span class="tok-var">sharedContext</span>: <span class="tok-str">'Asistente UX in-app.'</span>,
+});
+
+<span class="tok-com">// 3. Abrir el panel + stream directo al DOM</span>
+<span class="tok-var">document</span>.<span class="tok-fn">startViewTransition</span>(() =&gt; <span class="tok-var">menu</span>.<span class="tok-fn">showPopover</span>());
+<span class="tok-key">const</span> <span class="tok-var">stream</span> = <span class="tok-var">summarizer</span>.<span class="tok-fn">summarizeStreaming</span>(<span class="tok-var">active</span>.<span class="tok-var">innerText</span>);
+<span class="tok-key">for await</span> (<span class="tok-key">const</span> <span class="tok-var">c</span> <span class="tok-key">of</span> <span class="tok-var">stream</span>) <span class="tok-var">out</span>.<span class="tok-var">textContent</span> += <span class="tok-var">c</span>;</pre>
+            </div>
+
+            <div class="code-frame">
+              <div class="titlebar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>follow-up-prompt.ts</div>
+              </div>
+              <pre
+                class="code-block"
+              ><span class="tok-com">// Sesión conversacional · follow-ups</span>
+<span class="tok-key">const</span> <span class="tok-var">session</span> = <span class="tok-key">await</span> <span class="tok-var">LanguageModel</span>.<span class="tok-fn">create</span>({
+  <span class="tok-var">initialPrompts</span>: [
+    { <span class="tok-var">role</span>: <span class="tok-str">'system'</span>, <span class="tok-var">content</span>: <span class="tok-str">'Asistente UX, breve.'</span> },
+    { <span class="tok-var">role</span>: <span class="tok-str">'user'</span>,   <span class="tok-var">content</span>: <span class="tok-str">`Contexto: ${ctx}`</span> },
+  ],
+});
+
+<span class="tok-var">form</span>.<span class="tok-fn">addEventListener</span>(<span class="tok-str">'submit'</span>, <span class="tok-key">async</span> (<span class="tok-var">e</span>) =&gt; {
+  <span class="tok-var">e</span>.<span class="tok-fn">preventDefault</span>();
+  <span class="tok-var">document</span>.<span class="tok-fn">startViewTransition</span>(() =&gt; <span class="tok-var">out</span>.<span class="tok-var">textContent</span> = <span class="tok-str">''</span>);
+  <span class="tok-key">for await</span> (<span class="tok-key">const</span> <span class="tok-var">c</span> <span class="tok-key">of</span> <span class="tok-var">session</span>.<span class="tok-fn">promptStreaming</span>(<span class="tok-var">input</span>.<span class="tok-var">value</span>)) {
+    <span class="tok-var">out</span>.<span class="tok-var">textContent</span> += <span class="tok-var">c</span>;
+  }
+});
+
+<span class="tok-var">menu</span>.<span class="tok-fn">addEventListener</span>(<span class="tok-str">'toggle'</span>, (<span class="tok-var">e</span>) =&gt; {
+  <span class="tok-key">if</span> (<span class="tok-var">e</span>.<span class="tok-var">newState</span> === <span class="tok-str">'closed'</span>) <span class="tok-var">session</span>.<span class="tok-fn">destroy</span>();
+});</pre>
+            </div>
+          </div>
+
+          <div class="applied-caption">
+            <span class="chip">Summarizer.create</span>
+            <span class="chip mag">LanguageModel.create</span>
+            <span class="chip">startViewTransition</span>
+            <span style="margin-left: 6px"
+              >// Resumen automático al abrir, follow-up conversacional dentro
+              del mismo menú.</span
+            >
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 14 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="11 Demo">
+        <div class="frame">
+          <div class="eyebrow">// MANOS A LA OBRA · EN VIVO</div>
+          <h1 class="title">
+            Simulador de la <span class="cyan">demo</span> en vivo
+          </h1>
+
+          <div class="demo-stage">
+            <div class="browser-chrome">
+              <div class="bar">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div class="url">https://app.local/dashboard</div>
+              </div>
+              <div class="doc">
+                <h4>Configuración de despliegue</h4>
+                <p>
+                  Ajusta los parámetros del runtime del cliente antes de
+                  promover a producción.
+                </p>
+
+                <div class="target" id="demo-target">
+                  <div
+                    class="mono"
+                    style="
+                      font-size: 18px;
+                      color: var(--grid-cyan);
+                      letter-spacing: 0.14em;
+                      margin-bottom: 6px;
+                    "
+                  >
+                    [ ANCHOR_TARGET ]
+                  </div>
+                  Click para probar anclaje — párrafo activo del DOM.
+                </div>
+
+                <p>
+                  El asistente toma este bloque como contexto y entrega una
+                  explicación contextual sin abandonar la app.
+                </p>
+
+                <button class="demo-btn" id="demo-btn">
+                  <span class="pulse"></span>
+                  Analizar con Gemini Nano
+                </button>
+              </div>
+            </div>
+
+            <div class="ai-panel" id="ai-panel">
+              <div class="ap-head">
+                <div class="left">
+                  <span class="live"></span> Gemini Nano // Local
+                </div>
+                <div class="right mono">streaming</div>
+              </div>
+
+              <div class="empty" id="ai-empty">
+                &gt;_ Esperando trigger del usuario.<br />
+                Pulsa
+                <b style="color: var(--accent-magenta)">"Analizar"</b> para
+                iniciar la inferencia local.
+              </div>
+
+              <div class="skeleton hidden" id="ai-skeleton">
+                <div class="bar w90"></div>
+                <div class="bar w70"></div>
+                <div class="bar w80"></div>
+                <div class="bar w60"></div>
+                <div class="bar w50"></div>
+                <div
+                  class="mono"
+                  style="
+                    margin-top: 14px;
+                    font-size: 20px;
+                    color: var(--accent-magenta);
+                    letter-spacing: 0.16em;
+                  "
+                >
+                  // streaming… 47 tokens/s
+                </div>
+              </div>
+
+              <div class="ai-result" id="ai-result">
+                <div class="tag-row">
+                  <span>type: key-points</span>
+                  <span>length: short</span>
+                  <span>local</span>
+                </div>
+                <h5>Resumen del bloque activo</h5>
+                <ul class="bullets">
+                  <li>
+                    Define umbrales de runtime del cliente antes de production.
+                  </li>
+                  <li>Valida memoria y red en cada release candidate.</li>
+                  <li>
+                    El asistente referencia este párrafo sin abandonar la vista.
+                  </li>
+                </ul>
+                <p
+                  class="mono"
+                  style="
+                    color: var(--grid-cyan);
+                    font-size: 20px;
+                    margin-top: 10px;
+                  "
+                >
+                  // done in 612ms — 0 network calls
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 15 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="12 Checklist">
+        <div class="frame">
+          <div
+            style="
+              position: absolute;
+              top: 96px;
+              right: 110px;
+              z-index: 0;
+              opacity: 0.5;
+            "
+          >
+            <div class="wf-torus" style="width: 170px; height: 170px">
+              <div class="tring t1"></div>
+              <div class="tring t2"></div>
+              <div class="tring t3"></div>
+              <div class="tring t4"></div>
+            </div>
+          </div>
+          <div class="eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="title">
+            Checklist: <span class="cyan">privacidad</span> &amp;
+            <span class="magenta">producción</span>
+          </h1>
+
+          <div class="check-grid">
+            <div class="check-item">
+              <div class="box">01</div>
+              <div>
+                <div class="k">Feature Detection estricto</div>
+                <div class="d">
+                  Valida <code>window.ai</code> antes de renderizar la UI del
+                  asistente. Sin modelo, sin botón.
+                </div>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="box">02</div>
+              <div>
+                <div class="k">Model Weights Management</div>
+                <div class="d">
+                  Notifica visualmente la carga de pesos del modelo local (~1.5
+                  GB). Estado, progreso, retry.
+                </div>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="box">03</div>
+              <div>
+                <div class="k">Sanitización obligatoria</div>
+                <div class="d">
+                  Filtra el output antes de inyectarlo en el DOM. Mitiga Prompt
+                  Injection en cada inserción.
+                </div>
+              </div>
+            </div>
+            <div class="check-item">
+              <div class="box">04</div>
+              <div>
+                <div class="k">Zero Local Persistence</div>
+                <div class="d">
+                  No almacenes prompts sensibles en <code>localStorage</code>.
+                  Sesión efímera, memoria limpia al cierre.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 16 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="Demo · Recursos">
+        <div class="mesh-bg" style="opacity: 0.4"></div>
+        <div class="frame demo-cta-frame">
+          <div class="demo-cta-eyebrow">// Build with AI · Santa Cruz</div>
+          <h1 class="demo-cta-title">
+            Explora la <span class="neon-magenta">demo</span>
+          </h1>
+          <div class="demo-cta-sub">
+            El menú contextual completo — markup, CSS y wiring con Summarizer +
+            Prompt API + View Transitions — está disponible en abierto.
+          </div>
+
+          <div class="demo-cta-grid">
+            <div class="demo-cta-card">
+              <div class="k">// 01 — SOURCE</div>
+              <div class="v">GitHub</div>
+              <div class="d">
+                github.com/vanessamarely<br />/contextual-ai-panel
+              </div>
+            </div>
+            <div class="demo-cta-card mag">
+              <div class="k">// 02 — VIDEO</div>
+              <div class="v">Sesión completa</div>
+              <div class="d">youtube.com/@vanessamarely</div>
+            </div>
+            <div class="demo-cta-card">
+              <div class="k">// 03 — SLIDES</div>
+              <div class="v">Esta presentación</div>
+              <div class="d">
+                vanessamarely.dev/talks<br />/build-with-ai-santa-cruz
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="position: absolute; top: 100px; right: 140px; opacity: 0.55"
+          >
+            <div class="wf-sphere" style="width: 200px; height: 200px">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+              <div class="ring r4"></div>
+              <div class="ring r5"></div>
+            </div>
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 160px;
+              left: 160px;
+              perspective: 800px;
+              opacity: 0.55;
+            "
+          >
+            <div class="wf-cube" style="width: 120px; height: 120px">
+              <div class="face f1" style="transform: translateZ(60px)"></div>
+              <div
+                class="face f2"
+                style="transform: rotateY(180deg) translateZ(60px)"
+              ></div>
+              <div
+                class="face f3"
+                style="transform: rotateY(90deg) translateZ(60px)"
+              ></div>
+              <div
+                class="face f4"
+                style="transform: rotateY(-90deg) translateZ(60px)"
+              ></div>
+              <div
+                class="face f5"
+                style="transform: rotateX(90deg) translateZ(60px)"
+              ></div>
+              <div
+                class="face f6"
+                style="transform: rotateX(-90deg) translateZ(60px)"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 17 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+
+      <section data-label="13 Q&amp;A">
+        <div class="mesh-bg"></div>
+        <div class="frame qa-frame">
+          <div class="eyebrow" style="margin-bottom: 32px">
+            // END OF TRANSMISSION
+          </div>
+          <div class="qa-mega neon-cyan">¿Preguntas?</div>
+          <div class="qa-thanks">
+            ¡Muchas gracias por asistir a este taller práctico!
+          </div>
+
+          <div class="qa-socials">
+            <div class="col">
+              <div class="net">Instagram</div>
+              <div class="handle">@vanessamarelycode</div>
+            </div>
+            <div class="col">
+              <div class="net">YouTube</div>
+              <div class="handle">vanessamarely</div>
+            </div>
+            <div class="col">
+              <div class="net">GitHub</div>
+              <div class="handle">vanessamarely</div>
+            </div>
+          </div>
+
+          <div
+            style="position: absolute; top: 80px; right: 120px; opacity: 0.7"
+          >
+            <div class="wf-sphere" style="width: 180px; height: 180px">
+              <div class="ring r1"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+              <div class="ring r4"></div>
+              <div class="ring r5"></div>
+            </div>
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 140px;
+              left: 140px;
+              perspective: 800px;
+              opacity: 0.7;
+            "
+          >
+            <div class="wf-cube" style="width: 110px; height: 110px">
+              <div class="face f1" style="transform: translateZ(55px)"></div>
+              <div
+                class="face f2"
+                style="transform: rotateY(180deg) translateZ(55px)"
+              ></div>
+              <div
+                class="face f3"
+                style="transform: rotateY(90deg) translateZ(55px)"
+              ></div>
+              <div
+                class="face f4"
+                style="transform: rotateY(-90deg) translateZ(55px)"
+              ></div>
+              <div
+                class="face f5"
+                style="transform: rotateX(90deg) translateZ(55px)"
+              ></div>
+              <div
+                class="face f6"
+                style="transform: rotateX(-90deg) translateZ(55px)"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bar">
+          <div class="socials">
+            <span>Instagram <b>vanessamarelycode</b></span>
+            <span>YouTube <b>vanessamarely</b></span>
+            <span>GitHub <b>vanessamarely</b></span>
+          </div>
+          <div class="counter">[ 18 <span class="total">/ 18</span> ]</div>
+        </div>
+      </section>
+    </deck-stage>
+
+    <script src="deck-stage.js"></script>
+    <script src="image-slot.js"></script>
+
+    <!-- Floating deck controls — hide rail / fullscreen -->
+    <style>
+      .deck-controls {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 9999;
+        display: flex;
+        gap: 8px;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .deck-ctrl {
+        appearance: none;
+        border: 1px solid rgba(0, 242, 255, 0.45);
+        background: rgba(2, 6, 23, 0.85);
+        color: #d8feff;
+        padding: 9px 14px;
+        font-family: inherit;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 4px;
+        backdrop-filter: blur(8px);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition:
+          background 0.15s,
+          border-color 0.15s,
+          color 0.15s;
+      }
+      .deck-ctrl:hover {
+        background: rgba(0, 242, 255, 0.12);
+        border-color: rgba(0, 242, 255, 0.85);
+      }
+      .deck-ctrl[data-active] {
+        background: rgba(189, 0, 255, 0.18);
+        border-color: rgba(189, 0, 255, 0.75);
+        color: #ffd9ff;
+      }
+      .deck-ctrl svg {
+        width: 14px;
+        height: 14px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+      }
+      @media print {
+        .deck-controls {
+          display: none !important;
+        }
+      }
+      deck-stage[data-presenting] ~ .deck-controls,
+      deck-stage:fullscreen ~ .deck-controls {
+        display: none;
+      }
+    </style>
+
+    <div class="deck-controls" id="deck-controls">
+      <button
+        class="deck-ctrl"
+        id="ctrl-rail"
+        title="Mostrar / ocultar panel lateral (S)"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="4" width="6" height="16" rx="1" />
+          <rect x="11" y="4" width="10" height="16" rx="1" />
+        </svg>
+        <span id="ctrl-rail-label">Ocultar panel</span>
+      </button>
+      <button class="deck-ctrl" id="ctrl-fs" title="Pantalla completa (F)">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />
+        </svg>
+        <span id="ctrl-fs-label">Pantalla completa</span>
+      </button>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
