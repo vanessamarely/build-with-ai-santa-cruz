@@ -15,6 +15,11 @@ Open `index.html` in your browser, or serve the folder with a simple HTTP server
 python3 -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```
+ 
+## Enlaces en vivo
+
+- La página de los slides está en: https://vanessamarely.github.io/build-with-ai-santa-cruz/
+- La demo se encuentra en: https://github.com/vanessamarely/contextual-ai-panel
 
 ## Features
 
