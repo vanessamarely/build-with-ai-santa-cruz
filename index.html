@@ -1189,161 +1189,142 @@
       </section>
 
       <section data-label="Aplicado · Markup + CSS">
-        <div class="frame">
-          <div class="eyebrow">// MANOS A LA OBRA · PASO 1 DE 2</div>
-          <h1 class="title">
-            Construyámoslo: <span class="cyan">HTML + CSS</span> del menú
-          </h1>
+    <div class="frame">
+      <div class="eyebrow">// MANOS A LA OBRA · PASO 1 DE 2</div>
+      <h1 class="title">Construyámoslo: <span class="cyan">HTML + CSS</span> del menú</h1>
 
-          <div class="applied-grid">
-            <div class="code-frame">
-              <div class="titlebar">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div>menu.html</div>
-              </div>
-              <pre
-                class="code-block"
-              ><span class="tok-com">&lt;!-- Bloque del DOM que sirve de ancla --&gt;</span>
-&lt;<span class="tok-fn">p</span> <span class="tok-key">id</span>=<span class="tok-str">"active"</span>&gt;Texto sobre el que el usuario pide ayuda…&lt;/<span class="tok-fn">p</span>&gt;
+      <div class="applied-grid">
+        <div class="code-frame">
+          <div class="titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div>menu.html</div>
+          </div>
+<pre class="code-block"><span class="tok-com">&lt;!-- Resultado de laboratorio con valor fuera de rango --&gt;</span>
+&lt;<span class="tok-fn">article</span> <span class="tok-key">id</span>=<span class="tok-str">"lab-tsh"</span> <span class="tok-key">class</span>=<span class="tok-str">"abnormal"</span>&gt;
+  &lt;<span class="tok-fn">h3</span>&gt;TSH (Tirotropina)&lt;/<span class="tok-fn">h3</span>&gt;
+  &lt;<span class="tok-fn">p</span> <span class="tok-key">class</span>=<span class="tok-str">"value"</span>&gt;4.5 mIU/L&lt;/<span class="tok-fn">p</span>&gt;
+  &lt;<span class="tok-fn">p</span> <span class="tok-key">class</span>=<span class="tok-str">"range"</span>&gt;Rango: 0.4 – 4.0&lt;/<span class="tok-fn">p</span>&gt;
+&lt;/<span class="tok-fn">article</span>&gt;
 
-<span class="tok-com">&lt;!-- Trigger nativo, sin librería de tooltips --&gt;</span>
-&lt;<span class="tok-fn">button</span> <span class="tok-key">popovertarget</span>=<span class="tok-str">"ctx-menu"</span>&gt;
-  Explicar este bloque
+<span class="tok-com">&lt;!-- Trigger nativo del panel --&gt;</span>
+&lt;<span class="tok-fn">button</span> <span class="tok-key">popovertarget</span>=<span class="tok-str">"explain"</span>&gt;
+  Explicámelo en palabras simples
 &lt;/<span class="tok-fn">button</span>&gt;
 
 <span class="tok-com">&lt;!-- Top Layer del navegador --&gt;</span>
-&lt;<span class="tok-fn">div</span> <span class="tok-key">id</span>=<span class="tok-str">"ctx-menu"</span> <span class="tok-key">popover</span>=<span class="tok-str">"auto"</span>&gt;
+&lt;<span class="tok-fn">div</span> <span class="tok-key">id</span>=<span class="tok-str">"explain"</span> <span class="tok-key">popover</span>=<span class="tok-str">"auto"</span>&gt;
   &lt;<span class="tok-fn">output</span> <span class="tok-key">id</span>=<span class="tok-str">"ai-out"</span>&gt;&lt;/<span class="tok-fn">output</span>&gt;
-&lt;/<span class="tok-fn">div</span>&gt;</pre>
-            </div>
+&lt;/<span class="tok-fn">div</span>&gt;</pre></pre>
+        </div>
 
-            <div class="code-frame">
-              <div class="titlebar">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div>menu.css</div>
-              </div>
-              <pre
-                class="code-block"
-              ><span class="tok-com">/* 1. El párrafo expone un ancla */</span>
-<span class="tok-fn">#active</span> { <span class="tok-key">anchor-name</span>: <span class="tok-str">--active</span>; }
+        <div class="code-frame">
+          <div class="titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div>menu.css</div>
+          </div>
+<pre class="code-block"><span class="tok-com">/* 1. El resultado anormal expone un ancla */</span>
+<span class="tok-fn">#lab-tsh</span> { <span class="tok-key">anchor-name</span>: <span class="tok-str">--lab</span>; }
 
 <span class="tok-com">/* 2. El popover se acopla al ancla */</span>
-<span class="tok-fn">#ctx-menu</span> {
+<span class="tok-fn">#explain</span> {
   <span class="tok-key">position</span>: <span class="tok-str">fixed</span>;
-  <span class="tok-key">position-anchor</span>: <span class="tok-str">--active</span>;
+  <span class="tok-key">position-anchor</span>: <span class="tok-str">--lab</span>;
   <span class="tok-key">position-area</span>: <span class="tok-str">right span-block</span>;
   <span class="tok-key">margin-inline-start</span>: <span class="tok-num">16px</span>;
-  <span class="tok-key">view-transition-name</span>: <span class="tok-str">ctx-menu</span>;
+  <span class="tok-key">view-transition-name</span>: <span class="tok-str">explain</span>;
 }
 
 <span class="tok-com">/* 3. Animación nativa entrada/salida */</span>
-<span class="tok-fn">::view-transition-old</span>(<span class="tok-str">ctx-menu</span>),
-<span class="tok-fn">::view-transition-new</span>(<span class="tok-str">ctx-menu</span>) {
+<span class="tok-fn">::view-transition-old</span>(<span class="tok-str">explain</span>),
+<span class="tok-fn">::view-transition-new</span>(<span class="tok-str">explain</span>) {
   <span class="tok-key">animation-duration</span>: <span class="tok-num">260ms</span>;
 }</pre>
-            </div>
-          </div>
+        </div>
+      </div>
 
-          <div class="applied-caption">
-            <span class="chip">popover=auto</span>
-            <span class="chip">anchor-name</span>
-            <span class="chip">position-area</span>
-            <span class="chip mag">view-transition-name</span>
-            <span style="margin-left: 6px"
-              >// Cero JS para posicionar, cero z-index, cero listeners.</span
-            >
-          </div>
+      <div class="applied-caption">
+        <span class="chip">popover=auto</span>
+        <span class="chip">anchor-name</span>
+        <span class="chip">position-area</span>
+        <span class="chip mag">view-transition-name</span>
+        <span style="margin-left:6px;">// Cero JS para posicionar, cero z-index, cero listeners.</span>
+      </div>
 
-          <div class="applied-demo-row">
-            <span id="applied-anchor">Párrafo activo del DOM</span>
-            <button
-              class="demo-run-btn"
-              popovertarget="applied-menu"
-              id="applied-trigger"
-            >
-              Abrir menú contextual
-            </button>
-            <span class="demo-live-tag"
-              >// anchor + popover + view-transition</span
-            >
-          </div>
+      <div class="applied-demo-row">
+        <span id="applied-anchor">TSH · 4.5 mIU/L · fuera de rango</span>
+        <button class="demo-run-btn" popovertarget="applied-menu" id="applied-trigger">
+          Explicámelo en palabras simples
+        </button>
+        <span class="demo-live-tag">// anchor + popover + view-transition</span>
+      </div>
 
-          <div id="applied-menu" popover="auto">
-            <div class="body">
-              <div class="k">// Resumen · key-points</div>
-              Bloque activo anclado y resumido localmente:
-              <ul>
-                <li>Configura el runtime del cliente.</li>
-                <li>Valida memoria y red por release.</li>
-                <li>Sin abandonar la vista.</li>
-              </ul>
-              <div
-                style="
-                  color: var(--grid-cyan);
-                  margin-top: 10px;
-                  font-size: 14px;
-                "
-              >
-                // anchored to #applied-anchor · 0 network
-              </div>
-            </div>
+      <div id="applied-menu" popover="auto">
+        <div class="body">
+          <div class="k">// Resumen · key-points</div>
+          Resultado anormal explicado:
+          <ul>
+            <li>TSH = hormona que regula la tiroides.</li>
+            <li>Valor 0.5 puntos por encima del rango normal.</li>
+            <li>No es un diagnóstico — consúltalo con tu médico.</li>
+          </ul>
+          <div style="color:var(--grid-cyan); margin-top:10px; font-size:14px;">
+            // anchored to #applied-anchor · 0 network
           </div>
         </div>
-        <div class="footer-bar">
-          <div class="socials">
-            <span>Instagram <b>vanessamarelycode</b></span>
-            <span>YouTube <b>vanessamarely</b></span>
-            <span>GitHub <b>vanessamarely</b></span>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="socials">
+        <span>Instagram <b>vanessamarelycode</b></span>
+        <span>YouTube <b>vanessamarely</b></span>
+        <span>GitHub <b>vanessamarely</b></span>
+      </div>
+      <div class="counter">[ 13 <span class="total">/ 18</span> ]</div>
+    </div>
+  </section>
+
+  <section data-label="Aplicado · IA + Streaming">
+    <div class="frame">
+      <div class="eyebrow">// MANOS A LA OBRA · PASO 2 DE 2</div>
+      <h1 class="title">Construyámoslo: <span class="magenta">IA + streaming</span> al panel</h1>
+
+      <div class="applied-grid">
+        <div class="code-frame">
+          <div class="titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div>summarize-on-open.ts</div>
           </div>
-          <div class="counter">[ 13 <span class="total">/ 18</span> ]</div>
-        </div>
-      </section>
-
-      <section data-label="Aplicado · IA + Streaming">
-        <div class="frame">
-          <div class="eyebrow">// MANOS A LA OBRA · PASO 2 DE 2</div>
-          <h1 class="title">
-            Construyámoslo: <span class="magenta">IA + streaming</span> al panel
-          </h1>
-
-          <div class="applied-grid">
-            <div class="code-frame">
-              <div class="titlebar">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div>summarize-on-open.ts</div>
-              </div>
-              <pre
-                class="code-block"
-              ><span class="tok-com">// 1. Feature detection estricto</span>
+<pre class="code-block"><span class="tok-com">// 1. Feature detection estricto</span>
 <span class="tok-key">if</span> (!(<span class="tok-str">'Summarizer'</span> <span class="tok-key">in</span> <span class="tok-var">self</span>)) <span class="tok-key">return</span>;
 <span class="tok-key">const</span> <span class="tok-var">status</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">availability</span>();
 <span class="tok-key">if</span> (<span class="tok-var">status</span> !== <span class="tok-str">'available'</span>) <span class="tok-key">return</span>;
 
-<span class="tok-com">// 2. Sesión local con contexto compartido</span>
-<span class="tok-key">const</span> <span class="tok-var">summarizer</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">create</span>({
+<span class="tok-com">// 2. Sesión con contexto clínico</span>
+<span class="tok-key">const</span> <span class="tok-var">sum</span> = <span class="tok-key">await</span> <span class="tok-var">Summarizer</span>.<span class="tok-fn">create</span>({
   <span class="tok-var">type</span>: <span class="tok-str">'key-points'</span>,
   <span class="tok-var">length</span>: <span class="tok-str">'short'</span>,
-  <span class="tok-var">sharedContext</span>: <span class="tok-str">'Asistente UX in-app.'</span>,
+  <span class="tok-var">sharedContext</span>: <span class="tok-str">'Explica resultados de laboratorio en lenguaje claro. No emite diagnósticos.'</span>,
 });
 
-<span class="tok-com">// 3. Abrir el panel + stream directo al DOM</span>
-<span class="tok-var">document</span>.<span class="tok-fn">startViewTransition</span>(() =&gt; <span class="tok-var">menu</span>.<span class="tok-fn">showPopover</span>());
-<span class="tok-key">const</span> <span class="tok-var">stream</span> = <span class="tok-var">summarizer</span>.<span class="tok-fn">summarizeStreaming</span>(<span class="tok-var">active</span>.<span class="tok-var">innerText</span>);
-<span class="tok-key">for await</span> (<span class="tok-key">const</span> <span class="tok-var">c</span> <span class="tok-key">of</span> <span class="tok-var">stream</span>) <span class="tok-var">out</span>.<span class="tok-var">textContent</span> += <span class="tok-var">c</span>;</pre>
-            </div>
+<span class="tok-com">// 3. Abrir el panel + stream del resumen</span>
+<span class="tok-var">document</span>.<span class="tok-fn">startViewTransition</span>(() =&gt; <span class="tok-var">explain</span>.<span class="tok-fn">showPopover</span>());
+<span class="tok-key">for await</span> (<span class="tok-key">const</span> <span class="tok-var">c</span> <span class="tok-key">of</span> <span class="tok-var">sum</span>.<span class="tok-fn">summarizeStreaming</span>(<span class="tok-var">labResult</span>.<span class="tok-var">innerText</span>)) {
+  <span class="tok-var">out</span>.<span class="tok-var">textContent</span> += <span class="tok-var">c</span>;
+}</pre>
+        </div>
 
-            <div class="code-frame">
-              <div class="titlebar">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div>follow-up-prompt.ts</div>
-              </div>
-              <pre
-                class="code-block"
-              ><span class="tok-com">// Sesión conversacional · follow-ups</span>
+        <div class="code-frame">
+          <div class="titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div>follow-up-prompt.ts</div>
+          </div>
+<pre class="code-block"><span class="tok-com">// Sesión conversacional · follow-ups del paciente</span>
 <span class="tok-key">const</span> <span class="tok-var">session</span> = <span class="tok-key">await</span> <span class="tok-var">LanguageModel</span>.<span class="tok-fn">create</span>({
   <span class="tok-var">initialPrompts</span>: [
-    { <span class="tok-var">role</span>: <span class="tok-str">'system'</span>, <span class="tok-var">content</span>: <span class="tok-str">'Asistente UX, breve.'</span> },
-    { <span class="tok-var">role</span>: <span class="tok-str">'user'</span>,   <span class="tok-var">content</span>: <span class="tok-str">`Contexto: ${ctx}`</span> },
+    { <span class="tok-var">role</span>: <span class="tok-str">'system'</span>,
+      <span class="tok-var">content</span>: <span class="tok-str">'Asistente médico. Lenguaje simple. Nunca diagnostiques.'</span> },
+    { <span class="tok-var">role</span>: <span class="tok-str">'user'</span>,
+      <span class="tok-var">content</span>: <span class="tok-str">`Contexto: ${labResult.innerText}`</span> },
   ],
 });
 
@@ -1355,152 +1336,106 @@
   }
 });
 
-<span class="tok-var">menu</span>.<span class="tok-fn">addEventListener</span>(<span class="tok-str">'toggle'</span>, (<span class="tok-var">e</span>) =&gt; {
+<span class="tok-com">// Privacidad: datos médicos jamás salen del navegador</span>
+<span class="tok-var">explain</span>.<span class="tok-fn">addEventListener</span>(<span class="tok-str">'toggle'</span>, (<span class="tok-var">e</span>) =&gt; {
   <span class="tok-key">if</span> (<span class="tok-var">e</span>.<span class="tok-var">newState</span> === <span class="tok-str">'closed'</span>) <span class="tok-var">session</span>.<span class="tok-fn">destroy</span>();
 });</pre>
-            </div>
-          </div>
-
-          <div class="applied-caption">
-            <span class="chip">Summarizer.create</span>
-            <span class="chip mag">LanguageModel.create</span>
-            <span class="chip">startViewTransition</span>
-            <span style="margin-left: 6px"
-              >// Resumen automático al abrir, follow-up conversacional dentro
-              del mismo menú.</span
-            >
-          </div>
         </div>
-        <div class="footer-bar">
-          <div class="socials">
-            <span>Instagram <b>vanessamarelycode</b></span>
-            <span>YouTube <b>vanessamarely</b></span>
-            <span>GitHub <b>vanessamarely</b></span>
+      </div>
+
+      <div class="applied-caption">
+        <span class="chip">Summarizer.create</span>
+        <span class="chip mag">LanguageModel.create</span>
+        <span class="chip">startViewTransition</span>
+        <span style="margin-left:6px;">// Resumen automático + follow-up. Datos del paciente nunca dejan el navegador.</span>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="socials">
+        <span>Instagram <b>vanessamarelycode</b></span>
+        <span>YouTube <b>vanessamarely</b></span>
+        <span>GitHub <b>vanessamarely</b></span>
+      </div>
+      <div class="counter">[ 14 <span class="total">/ 18</span> ]</div>
+    </div>
+  </section>
+
+  <section data-label="11 Demo">
+    <div class="frame">
+      <div class="eyebrow">// MANOS A LA OBRA · EN VIVO</div>
+      <h1 class="title">Simulador de la <span class="cyan">demo</span> en vivo</h1>
+
+      <div class="demo-stage">
+        <div class="browser-chrome">
+          <div class="bar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="url">https://miportal-salud.local/laboratorio</div>
           </div>
-          <div class="counter">[ 14 <span class="total">/ 18</span> ]</div>
-        </div>
-      </section>
+          <div class="doc">
+            <h4>Resultados de laboratorio · Vanessa A.</h4>
+            <p>Perfil tiroideo del 24/05/2026. Algunos valores están fuera del rango de referencia.</p>
 
-      <section data-label="11 Demo">
-        <div class="frame">
-          <div class="eyebrow">// MANOS A LA OBRA · EN VIVO</div>
-          <h1 class="title">
-            Simulador de la <span class="cyan">demo</span> en vivo
-          </h1>
-
-          <div class="demo-stage">
-            <div class="browser-chrome">
-              <div class="bar">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div class="url">https://app.local/dashboard</div>
-              </div>
-              <div class="doc">
-                <h4>Configuración de despliegue</h4>
-                <p>
-                  Ajusta los parámetros del runtime del cliente antes de
-                  promover a producción.
-                </p>
-
-                <div class="target" id="demo-target">
-                  <div
-                    class="mono"
-                    style="
-                      font-size: 18px;
-                      color: var(--grid-cyan);
-                      letter-spacing: 0.14em;
-                      margin-bottom: 6px;
-                    "
-                  >
-                    [ ANCHOR_TARGET ]
-                  </div>
-                  Click para probar anclaje — párrafo activo del DOM.
-                </div>
-
-                <p>
-                  El asistente toma este bloque como contexto y entrega una
-                  explicación contextual sin abandonar la app.
-                </p>
-
-                <button class="demo-btn" id="demo-btn">
-                  <span class="pulse"></span>
-                  Analizar con Gemini Nano
-                </button>
-              </div>
+            <div class="target" id="demo-target">
+              <div class="mono" style="font-size:18px;color:var(--grid-cyan);letter-spacing:0.14em;margin-bottom:6px;">[ ⚠ FUERA DE RANGO ]</div>
+              TSH (Tirotropina): <b>4.5 mIU/L</b> · Rango normal: 0.4 – 4.0 mIU/L
             </div>
 
-            <div class="ai-panel" id="ai-panel">
-              <div class="ap-head">
-                <div class="left">
-                  <span class="live"></span> Gemini Nano // Local
-                </div>
-                <div class="right mono">streaming</div>
-              </div>
+            <p>El resultado tiene jerga clínica. El asistente local lo traduce a lenguaje claro — sin enviar datos médicos a ningún servidor.</p>
 
-              <div class="empty" id="ai-empty">
-                &gt;_ Esperando trigger del usuario.<br />
-                Pulsa
-                <b style="color: var(--accent-magenta)">"Analizar"</b> para
-                iniciar la inferencia local.
-              </div>
+            <button class="demo-btn" id="demo-btn">
+              <span class="pulse"></span>
+              Explicámelo en palabras simples
+            </button>
+          </div>
+        </div>
 
-              <div class="skeleton hidden" id="ai-skeleton">
-                <div class="bar w90"></div>
-                <div class="bar w70"></div>
-                <div class="bar w80"></div>
-                <div class="bar w60"></div>
-                <div class="bar w50"></div>
-                <div
-                  class="mono"
-                  style="
-                    margin-top: 14px;
-                    font-size: 20px;
-                    color: var(--accent-magenta);
-                    letter-spacing: 0.16em;
-                  "
-                >
-                  // streaming… 47 tokens/s
-                </div>
-              </div>
+        <div class="ai-panel" id="ai-panel">
+          <div class="ap-head">
+            <div class="left"><span class="live"></span> Gemini Nano // Local</div>
+            <div class="right mono">streaming</div>
+          </div>
 
-              <div class="ai-result" id="ai-result">
-                <div class="tag-row">
-                  <span>type: key-points</span>
-                  <span>length: short</span>
-                  <span>local</span>
-                </div>
-                <h5>Resumen del bloque activo</h5>
-                <ul class="bullets">
-                  <li>
-                    Define umbrales de runtime del cliente antes de production.
-                  </li>
-                  <li>Valida memoria y red en cada release candidate.</li>
-                  <li>
-                    El asistente referencia este párrafo sin abandonar la vista.
-                  </li>
-                </ul>
-                <p
-                  class="mono"
-                  style="
-                    color: var(--grid-cyan);
-                    font-size: 20px;
-                    margin-top: 10px;
-                  "
-                >
-                  // done in 612ms — 0 network calls
-                </p>
-              </div>
+          <div class="empty" id="ai-empty">
+            &gt;_ Esperando trigger del paciente.<br/>
+            Pulsa <b style="color:var(--accent-magenta);">"Explícamelo"</b> para iniciar la inferencia local.
+          </div>
+
+          <div class="skeleton hidden" id="ai-skeleton">
+            <div class="bar w90"></div>
+            <div class="bar w70"></div>
+            <div class="bar w80"></div>
+            <div class="bar w60"></div>
+            <div class="bar w50"></div>
+            <div class="mono" style="margin-top:14px;font-size:20px;color:var(--accent-magenta);letter-spacing:0.16em;">// streaming… 47 tokens/s</div>
+          </div>
+
+          <div class="ai-result" id="ai-result">
+            <div class="tag-row">
+              <span>type: key-points</span>
+              <span>length: short</span>
+              <span>local</span>
             </div>
+            <h5>Qué significa tu TSH</h5>
+            <ul class="bullets">
+              <li><b>TSH</b> es la hormona que controla la tiroides.</li>
+              <li>Tu valor (4.5) está 0.5 puntos por encima del rango normal.</li>
+              <li>Puede indicar hipotiroidismo leve — consúltalo con tu médico.</li>
+              <li>No es un diagnóstico. El asistente nunca reemplaza al profesional.</li>
+            </ul>
+            <p class="mono" style="color:var(--grid-cyan);font-size:20px;margin-top:10px;">// done in 612ms · 0 network · 0 datos enviados</p>
           </div>
         </div>
-        <div class="footer-bar">
-          <div class="socials">
-            <span>Instagram <b>vanessamarelycode</b></span>
-            <span>YouTube <b>vanessamarely</b></span>
-            <span>GitHub <b>vanessamarely</b></span>
-          </div>
-          <div class="counter">[ 15 <span class="total">/ 18</span> ]</div>
-        </div>
-      </section>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="socials">
+        <span>Instagram <b>vanessamarelycode</b></span>
+        <span>YouTube <b>vanessamarely</b></span>
+        <span>GitHub <b>vanessamarely</b></span>
+      </div>
+      <div class="counter">[ 15 <span class="total">/ 18</span> ]</div>
+    </div>
+  </section>
 
       <section data-label="12 Checklist">
         <div class="frame">
@@ -1678,6 +1613,8 @@
         </div>
       </section>
 
+  
+
       <section data-label="13 Q&amp;A">
         <div class="mesh-bg"></div>
         <div class="frame qa-frame">
@@ -1762,65 +1699,6 @@
 
     <script src="deck-stage.js"></script>
     <script src="image-slot.js"></script>
-
-    <!-- Floating deck controls — hide rail / fullscreen -->
-    <style>
-      .deck-controls {
-        position: fixed;
-        top: 16px;
-        right: 16px;
-        z-index: 9999;
-        display: flex;
-        gap: 8px;
-        font-family: "JetBrains Mono", monospace;
-      }
-      .deck-ctrl {
-        appearance: none;
-        border: 1px solid rgba(0, 242, 255, 0.45);
-        background: rgba(2, 6, 23, 0.85);
-        color: #d8feff;
-        padding: 9px 14px;
-        font-family: inherit;
-        font-size: 13px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        cursor: pointer;
-        border-radius: 4px;
-        backdrop-filter: blur(8px);
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition:
-          background 0.15s,
-          border-color 0.15s,
-          color 0.15s;
-      }
-      .deck-ctrl:hover {
-        background: rgba(0, 242, 255, 0.12);
-        border-color: rgba(0, 242, 255, 0.85);
-      }
-      .deck-ctrl[data-active] {
-        background: rgba(189, 0, 255, 0.18);
-        border-color: rgba(189, 0, 255, 0.75);
-        color: #ffd9ff;
-      }
-      .deck-ctrl svg {
-        width: 14px;
-        height: 14px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      @media print {
-        .deck-controls {
-          display: none !important;
-        }
-      }
-      deck-stage[data-presenting] ~ .deck-controls,
-      deck-stage:fullscreen ~ .deck-controls {
-        display: none;
-      }
-    </style>
 
     <div class="deck-controls" id="deck-controls">
       <button
