@@ -1093,9 +1093,10 @@ pre.code-block {
 }
 .demo-cta-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* two equal halves */
   gap: 28px;
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
 }
 .demo-cta-card {
   padding: 28px 32px;
@@ -1123,6 +1124,12 @@ pre.code-block {
   font-size: 24px;
   color: var(--ink-dim);
   line-height: 1.35;
+}
+
+/* Make links inside demo cards more legible on dark background */
+.demo-cta-card .d a {
+  color: #c8ffb4; /* soft light green for high contrast */
+  text-decoration: underline;
 }
 .demo-cta-card.mag {
   border-color: rgba(189, 0, 255, 0.4);
