@@ -30,6 +30,32 @@
         applyRail();
     });
 
+    // ── Light mode toggle ──────────────────────────────────
+    const THEME_KEY = 'deck.lightMode';
+    const btnTheme = document.getElementById('ctrl-theme');
+    const lblTheme = document.getElementById('ctrl-theme-label');
+    let lightMode = false;
+    try { lightMode = localStorage.getItem(THEME_KEY) === '1'; } catch (e) { }
+
+    const applyTheme = () => {
+        if (lightMode) {
+            document.documentElement.classList.add('light-mode');
+            btnTheme.setAttribute('data-active', '');
+            lblTheme.textContent = 'Modo oscuro';
+        } else {
+            document.documentElement.classList.remove('light-mode');
+            btnTheme.removeAttribute('data-active');
+            lblTheme.textContent = 'Modo claro';
+        }
+    };
+    applyTheme();
+
+    btnTheme.addEventListener('click', () => {
+        lightMode = !lightMode;
+        try { localStorage.setItem(THEME_KEY, lightMode ? '1' : '0'); } catch (e) { }
+        applyTheme();
+    });
+
     // ── Fullscreen toggle ──────────────────────────────────
     const isFs = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
 
@@ -63,6 +89,7 @@
         if (e.metaKey || e.ctrlKey || e.altKey) return;
         if (e.key === 's' || e.key === 'S') { btnRail.click(); }
         if (e.key === 'f' || e.key === 'F') { btnFs.click(); }
+        if (e.key === 'l' || e.key === 'L') { btnTheme.click(); }
     });
 })();
 

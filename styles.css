@@ -2846,3 +2846,108 @@ deck-stage[data-presenting] ~ .deck-controls,
 deck-stage:fullscreen ~ .deck-controls {
   display: none;
 }
+
+/* ============ LIGHT MODE ============ */
+html.light-mode {
+  --bg-deep: #f0f4ff;
+  --bg-panel: rgba(255, 255, 255, 0.95);
+  --grid-cyan: #0077a0;
+  --accent-magenta: #7b00cc;
+  --accent-red: #cc1a4f;
+  --ink: #0d1b2e;
+  --ink-dim: #4a6480;
+  --rule: rgba(0, 119, 160, 0.18);
+  --rule-strong: rgba(0, 119, 160, 0.42);
+}
+
+html.light-mode body {
+  background: #e8edf8;
+}
+
+html.light-mode deck-stage > section {
+  background: var(--bg-deep);
+  color: var(--ink);
+}
+
+/* Lighter blueprint grid */
+html.light-mode deck-stage > section::before {
+  background-image:
+    linear-gradient(rgba(0, 119, 160, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 119, 160, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(0, 119, 160, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 119, 160, 0.05) 1px, transparent 1px);
+}
+
+/* Lighter vignette */
+html.light-mode deck-stage > section::after {
+  background:
+    radial-gradient(ellipse at 18% 12%, rgba(0, 119, 160, 0.08), transparent 55%),
+    radial-gradient(ellipse at 85% 90%, rgba(123, 0, 204, 0.08), transparent 60%),
+    radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(200, 210, 230, 0.35) 100%);
+}
+
+html.light-mode .footer-bar {
+  background: rgba(220, 228, 245, 0.9);
+  border-top-color: var(--rule);
+}
+
+html.light-mode pre.code-block {
+  background: rgba(220, 228, 245, 0.92);
+  color: #0d2040;
+}
+html.light-mode code { color: #0d2040; }
+html.light-mode .tok-key  { color: #a8005c; }
+html.light-mode .tok-fn   { color: #005f80; }
+html.light-mode .tok-str  { color: #2a6e00; }
+html.light-mode .tok-com  { color: #7a8f9a; }
+html.light-mode .tok-var  { color: #0d2040; }
+html.light-mode .tok-num  { color: #7a4800; }
+
+html.light-mode .neon-cyan {
+  color: #004d6e;
+  text-shadow: none;
+}
+html.light-mode .neon-magenta {
+  color: #5a0099;
+  text-shadow: none;
+}
+
+html.light-mode h1.title {
+  color: #0d1b2e;
+}
+
+html.light-mode .deck-ctrl {
+  background: rgba(220, 228, 245, 0.9);
+  border-color: rgba(0, 119, 160, 0.5);
+  color: #0d1b2e;
+}
+html.light-mode .deck-ctrl:hover {
+  background: rgba(0, 119, 160, 0.12);
+  border-color: rgba(0, 119, 160, 0.85);
+}
+html.light-mode .deck-ctrl[data-active] {
+  background: rgba(123, 0, 204, 0.12);
+  border-color: rgba(123, 0, 204, 0.6);
+  color: #3d006e;
+}
+
+html.light-mode .glass {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 119, 160, 0.35);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+html.light-mode .pill {
+  background: rgba(0, 119, 160, 0.07);
+  border-color: rgba(0, 119, 160, 0.4);
+  color: #005a80;
+}
+html.light-mode .pill.magenta {
+  background: rgba(123, 0, 204, 0.5);
+  border-color: rgba(123, 0, 204, 0.8);
+  color: #fff;
+}
+
+html.light-mode .mesh-bg { opacity: 0.15 !important; }
