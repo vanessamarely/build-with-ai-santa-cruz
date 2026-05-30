@@ -2550,6 +2550,35 @@ pre.code-block {
   font-weight: 500;
 }
 
+.qa-qr-row {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  margin-top: 48px;
+}
+.qa-qr-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.qa-qr-img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border: 2px solid var(--rule-strong);
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+}
+.qa-qr-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  color: var(--grid-cyan);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 /* scanline */
 .scanline {
   position: absolute;
